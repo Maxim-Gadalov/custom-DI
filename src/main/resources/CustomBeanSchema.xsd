@@ -1,0 +1,20 @@
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">
+      This schema made for custom DI's beans
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="bean" type="beanType"/>
+  <xsd:element name="beans">
+   <xsd:complexType>
+    <xsd:sequence>
+     <xsd:element ref="bean" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+   </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="beanType">
+  <xsd:attribute name="id" type="xsd:ID" use="required"/>
+  <xsd:attribute name="classpath" type="xsd:string" use="required"/>	
+  <xsd:attribute name="scope" type="xsd:string" use="optional" default="singleton"/>
+  </xsd:complexType>
+</xsd:schema>

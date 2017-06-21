@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.example.org/CustomBean-schema" 
+      xsi:schemalocation="http://www.example.org/CustomBean-schema Beanschema.xsd">
+      <bean id="superBelarus9000" classpath="edu.courses.dependencyinjection.test.SuperBelarusRobot9000" >
+      </bean>
+      <bean id="superBelarus5000" classpath = "edu.courses.dependencyinjection.test.SuperRobotBelarus5000" >
+      </bean>
+      <bean id="chine" classpath = "edu.courses.dependencyinjection.test.ChineRobot">
+      </bean>
+      
+ </beans>     
